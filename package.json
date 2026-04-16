@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "Techinfoyt",
+  "author": "Lareb",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.0",
