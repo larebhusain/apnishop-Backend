@@ -25,7 +25,7 @@ const app = express();
 //middelwares
 app.use(cors(
   {
-  origin: 'https://apnishop-frontend.vercel.app',
+  origin: 'https://apnishop-frontend.onrender.com',
   credentials: true,
   }
 ));
