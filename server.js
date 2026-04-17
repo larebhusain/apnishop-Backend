@@ -8,10 +8,10 @@ import cors from "cors";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
-import path from 'path'
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// import path from 'path'
+// import { fileURLToPath } from "url";
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 //configure env
 dotenv.config();
@@ -31,20 +31,18 @@ app.use(cors(
 ));
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, './client/build')))
+// app.use(express.static(path.join(__dirname, './client/build/index.html')))
 
 //routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 app.use("/api/v1/contact", contactRoutes);
-//rest api
-// app.get("/", (req, res) => {
-//   res.send("<h1>Welcome to ecommerce app</h1>");
-// });
-app.get('*', function(req, res){
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
+// rest api
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to ecommerce app</h1>");
 });
+ 
 //PORT
 const PORT = process.env.PORT || 8080;
 
