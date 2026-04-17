@@ -80,7 +80,7 @@ export const sendReplyEmail = async (userEmail, userName, replyMessage, subject)
               <p>To view the full conversation and reply, please visit your dashboard:</p>
               
               <div style="text-align: center;">
-                <a href="${process.env.FRONTEND_URL}/dashboard/user/support-messages" class="button">
+                <a href="https://apnishop-frontend.onrender.com}/dashboard/user/support-messages" class="button">
                   View Conversation
                 </a>
               </div>
